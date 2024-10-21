@@ -1,0 +1,67 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/ProductEntry",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7299
+        }
+      ],
+      "UpstreamPathTemplate": "/api/ProductEntry",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "AddHeadersToRequest": {
+        "Authorization": "Authorization"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/ProductEntry/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7299
+        }
+      ],
+      "UpstreamPathTemplate": "/api/ProductEntry/{id}",
+      "UpstreamHttpMethod": [ "GET", "DELETE" ],
+      "AddHeadersToRequest": {
+        "Authorization": "Authorization"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/ProductList",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7299
+        }
+      ],
+      "UpstreamPathTemplate": "/api/ProductList",
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "AddHeadersToRequest": {
+        "Authorization": "Authorization"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/ProductList/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7299
+        }
+      ],
+      "UpstreamPathTemplate": "/api/ProductList/{id}",
+      "UpstreamHttpMethod": [ "GET", "PUT", "DELETE" ],
+      "AddHeadersToRequest": {
+        "Authorization": "Authorization"
+      }
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:5001"
+  }
+}
